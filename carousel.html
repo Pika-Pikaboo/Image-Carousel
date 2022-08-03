@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Carousel</title>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="image-slider fade">
+            <img src="./Image/1.jpg" alt="1">
+            <div class="page-number">1 / 4</div>
+            <div class="caption">Image 1</div>
+        </div>
+
+        <div class="image-slider fade">
+            <img src="./Image/2.jpg" alt="2">
+            <div class="page-number">2 / 4</div>
+            <div class="caption">Image 2</div>
+        </div>
+
+        <div class="image-slider fade">
+            <img src="./Image/3.jpg" alt="3">
+            <div class="page-number">3 / 4</div>
+            <div class="caption">Image 3</div>
+        </div>
+
+        <div class="image-slider fade">
+            <img src="./Image/4.jpg" alt="4">
+            <div class="page-number">4 / 4</div>
+            <div class="caption">Image 4</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <div style="text-align: center; margin-top: -5%;">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+        <span class="dots" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

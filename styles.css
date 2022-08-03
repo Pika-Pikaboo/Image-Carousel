@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 5% auto;
+}
+
+.image-slider {
+    display: none;
+}
+
+.image-slider>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.prev,
+.next {
+    position: absolute;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 30px 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.5s ease;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.page-number {
+    position: absolute;
+    font-size: 1.3rem;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    font-size: 1.7rem;
+    color: #fff;
+    left: 50%;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dots {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 8px;
+    border-radius: 50%;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dots:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
